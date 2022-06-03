@@ -13,12 +13,13 @@ const Countdown = () => {
   const getDiff = () => {
     const now = new Date();
     let sec = (date.getTime() - now.getTime()) / 1000;
-    const days = Math.floor(sec / (3600 * 24));
+    let days: string | number = Math.floor(sec / (3600 * 24));
     sec -= days * 3600 * 24;
-    const hours = Math.floor(sec / 3600);
+    let hours = Math.floor(sec / 3600);
     sec -= hours * 3600;
-    const min = Math.floor(sec / 60);
+    let min = Math.floor(sec / 60);
     sec -= min * 60;
+    days = "" + days;
 
     setTime("WTF");
     // setTime(`${days.toString()}d ${hours.toString()}t ${min.toString()}m ${sec.toString().split(".")[0]}s`);
