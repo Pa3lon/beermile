@@ -21,7 +21,7 @@ const Countdown = () => {
     sec -= min * 60;
     days = "" + days;
 
-    setTime("WTF");
+    setTime(days);
     // setTime(`${days.toString()}d ${hours.toString()}t ${min.toString()}m ${sec.toString().split(".")[0]}s`);
   };
 
