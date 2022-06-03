@@ -20,7 +20,8 @@ const Countdown = () => {
     const min = Math.floor(sec / 60);
     sec -= min * 60;
 
-    setTime(`${days}d ${hours}t ${min}m ${sec.toString().split(".")[0]}s`);
+    setTime(days.toString());
+    // setTime(`${days.toString()}d ${hours.toString()}t ${min.toString()}m ${sec.toString().split(".")[0]}s`);
   };
 
   return (
