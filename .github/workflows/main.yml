@@ -12,8 +12,8 @@ jobs:
         uses: appleboy/ssh-action@v0.1.4
         with:
           host: 185.35.186.116
-          username: root
+          username: vds
           key: ${{ secrets.key }}
-          port: 2087
+          port: 22
           script: |
             mkdir 'Hello'
