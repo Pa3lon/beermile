@@ -1,0 +1,19 @@
+name: Deployment Workflow
+on:
+  push:
+    branches: [main]
+
+jobs:
+  job_one:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH Remote Commands
+        uses: appleboy/ssh-action@v0.1.4
+        with:
+          host: 185.35.186.116
+          username: vds
+          key: ${{ secret.key }}
+          port: 22
+          script: |
+            mkdir 'Hello'
