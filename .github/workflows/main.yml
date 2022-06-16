@@ -14,6 +14,6 @@ jobs:
           host: 185.35.186.116
           username: vds
           key: ${{ secrets.key }}
-          port: 22
+          port: 2087
           script: |
             mkdir 'Hello'
