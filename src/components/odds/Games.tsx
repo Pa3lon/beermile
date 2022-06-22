@@ -1,28 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BetItem from "./BetItem";
 
 interface Props {
   games: any[];
 }
 
+const competoters = [
+  { name: "Patrick Lønhaug", odds: 6000 },
+  { name: "Tråll-Hirsti", odds: 1.02 },
+  { name: "Sigurd Gundersen", odds: 1.5 },
+  { name: "Niklas Busk Treningsleir Jensen", odds: 1.2 },
+  { name: "Daniel Salamonsen", odds: 1.99 },
+  { name: "Skansen", odds: 4.2 },
+  { name: "Johannes Jonassen Pleym", odds: 1.05 },
+  { name: "Andreas Mathisen", odds: 6.9 },
+  { name: "Don Omar", odds: 2500 },
+  { name: "Thor Arne", odds: 1.01 },
+];
+
 const Games = (props: Props) => {
+  const [items, setItems] = useState<any[]>([]);
+
+  useEffect(() => {
+    competoters.sort((a: any, b: any) => (a.odds > b.odds ? 1 : -1));
+    setItems(competoters);
+  }, []);
+
   return (
-    <div className="flex justify-between w-5/12">
+    <div className="md:flex md:justify-between md:w-5/12">
       <div>
         <p className="text-center">Winner</p>
         <ul className="mt-6 space-y-2">
-          <BetItem item="Sigurd Gundersen" odds={1.98} />
-          <BetItem item="Daniel Salamonsen" odds={1.99} />
-          <BetItem item="Niklas Busk Bindestrek Jensen" odds={3.0} />
-          <BetItem item="Henrik Jakola Skansen" odds={4.2} />
-          <BetItem item="Johannes Jonassen Pleym" odds={1.05} />
-          <BetItem item="Andreas Mathisen" odds={6.9} />
-          <BetItem item="Don Omar" odds={5000} />
-          <BetItem item="Patrick Lønhaug" odds={5001} />
+          {items.map((c, i) => (
+            <div key={i}>
+              <BetItem item={c.name} odds={c.odds} />
+            </div>
+          ))}
         </ul>
       </div>
       <div>
-        <p className="text-center">Spesials</p>
+        <p className="text-center">Specials</p>
         <ul className="mt-6 space-y-2">
           <div className="flex flex-col items-center justify-center w-64 p-4 bg-gray-800 rounded-lg">
             <p>Sigurd Total Spy 3.5</p>

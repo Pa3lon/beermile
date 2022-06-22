@@ -4,5 +4,6 @@ body {
 
 .main {
     background: url('../public/background.jpeg');
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 }
