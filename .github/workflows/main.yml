@@ -16,4 +16,8 @@ jobs:
           key: ${{ secrets.key }}
           port: 22
           script: |
-            mkdir 'Hello'
+            cd ~/deploy/beermile
+            ./deploy.sh
+            cd ~/deploy/beermile-api
+            ./run.sh &
+            echo "Deploy successful"
