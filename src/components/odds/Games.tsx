@@ -6,7 +6,7 @@ interface Props {
 }
 
 const competoters = [
-  { name: "Patrick Lønhaug", odds: 6000 },
+  { name: "Patrick Lønhaug", odds: 6001 },
   { name: "Tråll-Hirsti", odds: 1.02 },
   { name: "Sigurd Gundersen", odds: 1.5 },
   { name: "Niklas Busk Treningsleir Jensen", odds: 1.2 },
