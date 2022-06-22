@@ -18,6 +18,4 @@ jobs:
           script: |
             cd ~/deploy/beermile
             ./deploy.sh
-            cd ~/deploy/beermile-api
-            ./run.sh &
             echo "Deploy successful"
