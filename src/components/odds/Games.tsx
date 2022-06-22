@@ -11,7 +11,7 @@ const competoters = [
   { name: "Sigurd Gundersen", odds: 1.5 },
   { name: "Niklas Busk Treningsleir Jensen", odds: 1.2 },
   { name: "Daniel Salamonsen", odds: 1.99 },
-  { name: "Skansen", odds: 4.2 },
+  { name: "Skansen", odds: 2.2 },
   { name: "Johannes Jonassen Pleym", odds: 1.05 },
   { name: "Andreas Mathisen", odds: 6.9 },
   { name: "Don Omar", odds: 2500 },
