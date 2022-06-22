@@ -8,12 +8,20 @@ const Profile = () => {
   useEffect(() => {
     getPersons().then((res) => {
       setProfiles(res.data);
+      console.log();
     });
   }, []);
 
   return (
-    <div>
-      <div>Profile</div>
+    <div className="flex justify-center md:pt-32 pt-12">
+      <ul>
+        {profiles.map((profile, index) => (
+          <div key={index}>
+            <p>{profile.name}</p>
+            <p>{profile.description}</p>
+          </div>
+        ))}
+      </ul>
     </div>
   );
 };
