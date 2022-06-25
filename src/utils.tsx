@@ -1,4 +1,5 @@
 import { IOdds } from "./components/odds/CreateOdds";
+import { IUpdates } from "./components/odds/Updates";
 import { IProfile } from "./components/profile/ProfileCreate";
 
 const axios = require("axios").default;
@@ -40,6 +41,21 @@ export const updateOdds = async (odds: IOdds) => {
       name: odds.name,
       odds: odds.odds,
       description: odds.description,
+    })
+    .then((res: any) => {
+      return res;
+    });
+};
+
+export const getUpdates = async () => {
+  return await axios.get(`${process.env.REACT_APP_SERVER_PATH}/updates`);
+};
+
+export const addUpdates = async (updates: IUpdates) => {
+  return await axios
+    .post(`${process.env.REACT_APP_SERVER_PATH}/updates`, {
+      title: updates.title,
+      content: updates.content,
     })
     .then((res: any) => {
       return res;

@@ -1,23 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { getOdds } from "../../utils";
 import BetItem from "./BetItem";
+import Updates from "./Updates";
 
 interface Props {
   games: any[];
 }
-
-const competoters = [
-  { name: "Patrick Lønhaug", odds: 6001 },
-  { name: "Tråll-Hirsti", odds: 1.02 },
-  { name: "Sigurd Gundersen", odds: 1.5 },
-  { name: "Niklas Busk Treningsleir Jensen", odds: 1.2 },
-  { name: "Daniel Salamonsen", odds: 1.99 },
-  { name: "Skansen", odds: 2.2 },
-  { name: "Johannes Jonassen Pleym", odds: 1.05 },
-  { name: "Andreas Mathisen", odds: 6.9 },
-  { name: "Don Omar", odds: 2500 },
-  { name: "Thor Arne", odds: 1.01 },
-];
 
 const Games = (props: Props) => {
   const [items, setItems] = useState<any[]>([]);
