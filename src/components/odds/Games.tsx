@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { getOdds } from "../../utils";
 import BetItem from "./BetItem";
 
 interface Props {
@@ -22,8 +23,10 @@ const Games = (props: Props) => {
   const [items, setItems] = useState<any[]>([]);
 
   useEffect(() => {
-    competoters.sort((a: any, b: any) => (a.odds > b.odds ? 1 : -1));
-    setItems(competoters);
+    getOdds().then((res: any) => {
+      res.data.sort((a: any, b: any) => (a.odds > b.odds ? 1 : -1));
+      setItems(res.data);
+    });
   }, []);
 
   return (
