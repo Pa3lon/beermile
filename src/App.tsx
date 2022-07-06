@@ -12,7 +12,13 @@ const App = () => {
   return (
     <div className="flex flex-col items-center justify-center main">
       <div className="absolute top-5 px-5 flex w-full justify-between">
-        <p className="text-white">Toppidrett</p>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/skans1/?hl=en"
+          className="text-white"
+        >
+          Live Stream
+        </a>
         <p
           onClick={() => setUpdatesOpen(true)}
           className="text-white cursor-pointer"
