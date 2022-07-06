@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const date = new Date("2022-07-09T12:00:00");
+const date = new Date("2022-07-09T14:00:00");
 const Countdown = () => {
   const [time, setTime] = useState<string>();
 
@@ -19,13 +19,16 @@ const Countdown = () => {
     sec -= hours * 3600;
     let min = Math.floor(sec / 60);
     sec -= min * 60;
-    days = "" + days;
 
-    setTime(
-      `${days.toString()}d ${hours.toString()}t ${min.toString()}m ${
-        sec.toString().split(".")[0]
-      }s`
-    );
+    if (days < 0) {
+      setTime("Stream e live ish");
+    } else {
+      setTime(
+        `${days.toString()}d ${hours.toString()}t ${min.toString()}m ${
+          sec.toString().split(".")[0]
+        }s`
+      );
+    }
   };
 
   return (
