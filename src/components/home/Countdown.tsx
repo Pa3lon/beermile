@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const date = new Date("2023-07-10T02:00:00");
+const date = new Date("2023-08-10T02:00:00");
 const Countdown = () => {
   const [time, setTime] = useState<string>();
 
@@ -33,7 +33,7 @@ const Countdown = () => {
 
   return (
     <div>
-      <p className="mt-16 text-red-500 text-5xl font-bold">{time}</p>
+      <p className="mt-16 text-5xl font-bold text-red-500">{time}</p>
     </div>
   );
 };
