@@ -11,10 +11,65 @@ const Games = (props: Props) => {
   const [items, setItems] = useState<any[]>([]);
 
   useEffect(() => {
+    /*
     getOdds().then((res: any) => {
       res.data.sort((a: any, b: any) => (a.odds > b.odds ? 1 : -1));
       setItems(res.data);
     });
+    */
+    const tempOdds = [
+      {
+        name: "Sigurd",
+        odds: 1.69,
+      },
+      {
+        name: "Salamonsen",
+        odds: 0.5,
+      },
+      {
+        name: "Pæt",
+        odds: 25.0,
+      },
+      {
+        name: "Salamonsen",
+        odds: 0.5,
+      },
+      {
+        name: "Don Omar",
+        odds: 2.5,
+      },
+      {
+        name: "Torro",
+        odds: -0.5,
+      },
+      {
+        name: "Busk-Bindestrek",
+        odds: 7.69,
+      },
+      {
+        name: "Johannes",
+        odds: 8.8,
+      },
+      {
+        name: "Skansen",
+        odds: 300,
+      },
+      {
+        name: "Marianne",
+        odds: 0.1,
+      },
+      {
+        name: "Lise",
+        odds: 0.6,
+      },
+      {
+        name: "Roar (Ølympikk)",
+        odds: 0.01,
+      },
+    ];
+    // sort bu odds
+    tempOdds.sort((a: any, b: any) => (a.odds > b.odds ? 1 : -1));
+    setItems(tempOdds);
   }, []);
 
   return (
