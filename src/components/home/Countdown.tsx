@@ -1,41 +1,79 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import "./CountdownTimer.css"; // Import the CSS file for styling
+// ts-ignore
 
-const date = new Date("2023-07-15T02:00:00");
-const Countdown = () => {
-  const [time, setTime] = useState<string>();
+interface Props {
+  targetDate: Date;
+}
+
+const CountdownTimer = (props: Props) => {
+  const [remainingTime, setRemainingTime] = useState<any>();
 
   useEffect(() => {
-    setInterval(() => {
-      getDiff();
+    const interval = setInterval(() => {
+      // ts-ignore
+      setRemainingTime(calculateRemainingTime());
     }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
-  const getDiff = () => {
-    const now = new Date();
-    let sec = (date.getTime() - now.getTime()) / 1000;
-    let days: string | number = Math.floor(sec / (3600 * 24));
-    sec -= days * 3600 * 24;
-    let hours = Math.floor(sec / 3600);
-    sec -= hours * 3600;
-    let min = Math.floor(sec / 60);
-    sec -= min * 60;
+  var calculateRemainingTime = () => {
+    const currentTime = new Date().getTime();
+    const difference = props.targetDate.getTime() - currentTime;
 
-    if (days < 0) {
-      setTime("Stream e live ish");
-    } else {
-      setTime(
-        `${days.toString()}d ${hours.toString()}t ${min.toString()}m ${
-          sec.toString().split(".")[0]
-        }s`
-      );
+    if (difference <= 0) {
+      return {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+      };
     }
+
+    const seconds = Math.floor((difference / 1000) % 60);
+    const minutes = Math.floor((difference / 1000 / 60) % 60);
+    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+    return {
+      days,
+      hours,
+      minutes,
+      seconds,
+    };
   };
 
   return (
-    <div>
-      <p className="mt-16 text-5xl font-bold text-red-500">{time}</p>
+    <div className="countdown-container">
+      <div className="countdown-item">
+        <div className="countdown-value">
+          {remainingTime ? remainingTime.days : "-"}
+        </div>
+        <div className="countdown-label">Dager</div>
+      </div>
+      <div className="countdown-item">
+        <div className="countdown-value">
+          {remainingTime ? remainingTime.hours : "-"}
+        </div>
+        <div className="countdown-label">Timer</div>
+      </div>
+      <div className="countdown-item">
+        <div className="countdown-value">
+          {remainingTime ? remainingTime.minutes : "-"}
+        </div>
+        <div className="countdown-label">Minutter</div>
+      </div>
+      <div className="countdown-item">
+        <div className="countdown-value">
+          {remainingTime ? remainingTime.seconds : "-"}
+        </div>
+        <div className="countdown-label">Sekunder</div>
+      </div>
     </div>
   );
 };
 
-export default Countdown;
+export default CountdownTimer;

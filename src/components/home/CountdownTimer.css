@@ -1,0 +1,21 @@
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown-item {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.countdown-value {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffb300;
+}
+
+.countdown-label {
+  font-size: 14px;
+  color: #fed65b;
+}

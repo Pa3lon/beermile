@@ -14,23 +14,7 @@ const Buttons = () => {
 
   return (
     <>
-      <div className="mt-12 flex w-full justify-center space-x-10">
-        <Button
-          onClick={join}
-          className="w-56"
-          variant="contained"
-          color="primary"
-        >
-          Påmelding
-        </Button>
-        <Button
-          onClick={results}
-          className="w-56"
-          variant="contained"
-          color="primary"
-        >
-          Resultater
-        </Button>
+      <div className="flex justify-center w-full mt-12 space-x-10">
         <Button
           onClick={() => setDialogOpen(true)}
           className="w-56"
@@ -41,7 +25,7 @@ const Buttons = () => {
         </Button>
       </div>
       <Dialog onClose={() => setDialogOpen(false)} open={dialogOpen}>
-        <img alt="guttan" src="/fav.jpg" />
+        <img alt="guttan" src="/fav2.jpeg" />
       </Dialog>
     </>
   );
