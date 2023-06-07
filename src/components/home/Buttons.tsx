@@ -1,7 +1,8 @@
 import { Button, Dialog } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
+import Index from "./competitors/Index";
 
-const count2 = new Date("2023-07-01T00:00:00");
+const count2 = new Date("2023-03-01T00:00:00");
 const count3 = new Date("2023-06-05T00:05:00");
 
 const Buttons = () => {
@@ -70,8 +71,12 @@ const Buttons = () => {
       <Dialog onClose={() => setTrollOpen(false)} open={trollOpen}>
         <img src="/fu_gif.gif" alt="fuck_u" />
       </Dialog>
-      <Dialog onClose={() => setCompetitorsOpen(false)} open={competitorsOpen}>
-        <img src="/fu_gif.gif" alt="fuck_u" />
+      <Dialog
+        maxWidth="xl"
+        onClose={() => setCompetitorsOpen(false)}
+        open={competitorsOpen}
+      >
+        <Index />
       </Dialog>
     </>
   );

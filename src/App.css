@@ -1,9 +1,9 @@
 body {
-    margin: 0px;
+  margin: 0px;
 }
 
 .main {
-    background: url('../public/background.jpeg');
-    height: auto;
-    min-height: 100vh;
+  background: url("../public/background.jpeg");
+  height: auto;
+  min-height: 100vh;
 }
