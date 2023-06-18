@@ -9,12 +9,12 @@ const PlayerCard = (props: Props) => {
   return (
     <div className="cursor-pointer">
       <img
+        className="w-52 2xl:w-64"
         src={
           props.profilePicture === ""
             ? "placeholder-male.png"
             : props.profilePicture
         }
-        width="240"
         style={{ borderRadius: "30%", marginTop: 20 }}
       />
     </div>

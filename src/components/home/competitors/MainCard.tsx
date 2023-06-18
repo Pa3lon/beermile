@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Scroll from "./Scroll";
 
 interface Props {
-  name: string;
-  profilePicture: string;
+  player: {
+    name: string;
+    image: string;
+    intro: string;
+  };
 }
 
 const MainCard = (props: Props) => {
   return (
-    <div className="w-full text-white">
-      <div className="absolute w-84 bg-red-50">
-        <img src="profile.webp" className="" alt="" />
+    <div className="w-full text-sm text-white">
+      <div className="absolute flex items-center justify-center w-84">
+        <img src="card-bg.png" alt="background" />
         <img
-          width={144}
-          style={{ left: "7.5rem" }}
-          className="absolute top-0 rounded-full top-28 left"
-          src="nik_1.png"
+          className="absolute rounded-full top-20 w-36 2xl:w-40"
+          src={props.player.image}
         />
+        <h2 className="absolute mb-4 text-lg italic 2xl:mb-5">
+          {props.player.name}
+        </h2>
+        <Scroll text={props.player.intro} />
       </div>
     </div>
   );

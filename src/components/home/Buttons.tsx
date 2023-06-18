@@ -49,7 +49,7 @@ const Buttons = () => {
       <div className="flex justify-center w-full mt-12 space-x-10">
         <Button
           onClick={() => setDialogOpen(true)}
-          className="w-56"
+          className="w-32 sm:w-56"
           variant="contained"
           color="primary"
         >
@@ -58,7 +58,7 @@ const Buttons = () => {
         <Button
           ref={btn2ref}
           onClick={() => handleCompetitorsClick()}
-          className="w-56"
+          className="w-32 sm:w-56"
           style={{ opacity: 0.25, cursor: "not-allowed" }}
           variant="contained"
           color="primary"
