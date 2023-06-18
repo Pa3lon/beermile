@@ -7,7 +7,7 @@ interface Props {
 
 const PlayerCard = (props: Props) => {
   return (
-    <div>
+    <div className="cursor-pointer">
       <img
         src={
           props.profilePicture === ""

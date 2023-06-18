@@ -1,5 +1,6 @@
 import { DialogContent, Grid, Paper } from "@mui/material";
 import PlayerCard from "./PlayerCard";
+import MainCard from "./MainCard";
 
 const competitors = [
   { name: "Sigurd Gundersen", image: "/sigurd_1.png" },
@@ -29,8 +30,8 @@ const Index = () => {
         }}
       >
         <Grid className="px-4" container>
-          <Grid item xs={12}>
-            <Grid container xs={8} spacing={2}>
+          <Grid container xs={12}>
+            <Grid container xs={9} spacing={2}>
               {competitors.map((competitor) => (
                 <Grid item xs={4}>
                   <PlayerCard
@@ -40,8 +41,11 @@ const Index = () => {
                 </Grid>
               ))}
             </Grid>
-            <Grid item xs={3}>
-              Content
+            <Grid container className="relative text-white" xs={3}>
+              <MainCard
+                name={"sadsadasdasddsa"}
+                profilePicture={"placeholder-male.png"}
+              />
             </Grid>
           </Grid>
         </Grid>
