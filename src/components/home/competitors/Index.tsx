@@ -56,7 +56,7 @@ const competitors = [
     name: "Andreas Mathisen",
     image: "/andreas_1.png",
     intro:
-      "Andreas er selve kongen av dette arrangementet og den soleklare favoritten. Han har trent i månedsvis på å kombinere sprintfart og effektiv ølsluking. Ryktene sier at han har en nærmest overnaturlig evne til å løpe raskt og fortsatt nyte sin pint. Det blir spennende å se om han kan leve opp til forventningene og opprettholde sin trone som ølkonge.",
+      "Andreas er selve kongen av dette arrangementet og den soleklare favoritten. Han har trent i månedsvis på å kombinere sprintfart og effektiv ølsluking. Ryktene sier at han har en nærmest overnaturlig evne til å løpe raskt og fortsatt nyte sin pint. Det blir spennende å se om han kan leve opp til forventningene og opprettholde sin trone som ølkonge. Andreas er selve kongen av dette arrangementet og den soleklare favoritten. Han har trent i månedsvis på å kombinere sprintfart og effektiv ølsluking. Ryktene sier at han har en nærmest overnaturlig evne til å løpe raskt og fortsatt nyte sin pint. Det blir spennende å se om han kan leve opp til forventningene og opprettholde sin trone som ølkonge.",
   },
 ];
 
@@ -81,9 +81,9 @@ const Index = () => {
           padding: 0,
         }}
       >
-        <Grid className="px-4" container>
-          <Grid container>
-            <Grid container xs={9}>
+        <div className="flex">
+          <div className="w-8/12">
+            <Grid container>
               {competitors.map((competitor) => (
                 <Grid key={competitor.name} item xs={4}>
                   <div onClick={() => setSelected(competitor)}>
@@ -95,11 +95,11 @@ const Index = () => {
                 </Grid>
               ))}
             </Grid>
-            <Grid container className="relative text-white" xs={3}>
-              <MainCard player={selected} />
-            </Grid>
-          </Grid>
-        </Grid>
+          </div>
+          <div className="bg-white">
+            <MainCard player={selected} />
+          </div>
+        </div>
       </Paper>
     </DialogContent>
   );

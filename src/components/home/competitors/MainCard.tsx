@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import Scroll from "./Scroll";
 
 interface Props {
@@ -15,7 +14,7 @@ const MainCard = (props: Props) => {
       <div className="absolute flex items-center justify-center w-84">
         <img src="card-bg.png" alt="background" />
         <img
-          className="absolute rounded-full top-20 w-36 2xl:w-40"
+          className="absolute rounded-full w-44 top-28 2xl:w-52"
           src={props.player.image}
         />
         <h2 className="absolute mb-4 text-lg italic 2xl:mb-5">

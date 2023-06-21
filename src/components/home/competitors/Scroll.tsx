@@ -5,7 +5,6 @@ interface Props {
 }
 
 const Scroll = (props: Props) => {
-  const [scrollStep, setScrollStep] = React.useState(1);
   const scrollRef = React.useRef<HTMLDivElement>(null);
   useEffect(() => {
     // Make the div scroll slowly all the way to the bottom
@@ -14,7 +13,7 @@ const Scroll = (props: Props) => {
     if (props.text) {
       const scrollInterval = setInterval(() => {
         if (scrollRef.current) {
-          scrollRef.current.scrollTop += 1;
+          scrollRef.current.scrollTop += 2;
           if (
             scrollRef.current.scrollTop + scrollRef.current.clientHeight >=
             scrollRef.current.scrollHeight
@@ -32,17 +31,10 @@ const Scroll = (props: Props) => {
 
   return (
     <p
-      style={{ wordWrap: "break-word" }}
-      className="absolute w-56 overflow-scroll 2xl:w-60 top-72 left-16 max-h-28 2xl:max-h-32"
+      style={{ wordWrap: "break-word", paddingTop: "11rem" }}
+      className="absolute mt-8 ml-8 overflow-scroll w-72 2xl:w-80 top-1/2 left-16 max-h-28 2xl:max-h-48"
       ref={scrollRef}
     >
-      <span className="hidden 2xl:inline 2xl:invisible ">
-        -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-      </span>
-      <span className="invisible 2xl:hidden ">
-        ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-      </span>
-      <span className=""></span>
       <br />
       {props.text}
     </p>
