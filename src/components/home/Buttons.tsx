@@ -2,8 +2,8 @@ import { Button, Dialog } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import Index from "./competitors/Index";
 
-const count2 = new Date("2023-06-28T18:00:00");
-const count3 = new Date("2023-06-28T18:05:00");
+const count2 = new Date("2023-07-01T00:00:00");
+const count3 = new Date("2023-07-01T00:10:00");
 
 const Buttons = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
