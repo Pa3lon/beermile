@@ -2,14 +2,14 @@ import { Button, Dialog } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import Index from "./competitors/Index";
 
-const count2 = new Date("2023-06-07T00:00:00");
-const count3 = new Date("2023-07-05T00:05:00");
+const count2 = new Date("2023-06-28T18:00:00");
+const count3 = new Date("2023-06-28T18:05:00");
 
 const Buttons = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [trollOpen, setTrollOpen] = useState(false);
   const [countdown, setCountdown] = useState("-:-:-:-");
-  const [competitorsOpen, setCompetitorsOpen] = useState(true);
+  const [competitorsOpen, setCompetitorsOpen] = useState(false);
   const btn2ref = useRef<HTMLButtonElement>(null);
 
   const handleCompetitorsClick = () => {

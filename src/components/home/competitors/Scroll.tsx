@@ -31,11 +31,10 @@ const Scroll = (props: Props) => {
 
   return (
     <p
-      style={{ wordWrap: "break-word", paddingTop: "11rem" }}
-      className="absolute mt-8 ml-8 overflow-scroll w-72 2xl:w-80 top-1/2 left-16 max-h-28 2xl:max-h-48"
+      style={{ wordWrap: "break-word" }}
+      className="absolute pt-24 mt-8 overflow-scroll text-xs sm:pt-44 sm:text-md w-52 sm:w-72 2xl:w-80 top-1/2 md:left-24 max-h-24 md:max-h-28 2xl:max-h-48"
       ref={scrollRef}
     >
-      <br />
       {props.text}
     </p>
   );
