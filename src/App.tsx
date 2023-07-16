@@ -21,7 +21,7 @@ const App = () => {
         <p className="mx-2 text-white">Live Stream</p>
       </div>
       <Logo />
-      <CountdownTimer targetDate={new Date("2023-07-15T14:00:00")} />
+      <CountdownTimer targetDate={new Date("2024-07-06T15:00:00")} />
       <Buttons />
       <UpdatesView open={updatesOpen} close={() => setUpdatesOpen(false)} />
     </div>
