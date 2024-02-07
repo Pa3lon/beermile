@@ -6,6 +6,7 @@ body {
   background: url("../public/background.jpeg");
   height: auto;
   min-height: 100vh;
+  background-size: cover;
 }
 
 ::-webkit-scrollbar {
