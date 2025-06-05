@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Buttons from "./components/home/Buttons";
 import CountdownTimer from "./components/home/Countdown";
 import Logo from "./components/home/Logo";
 import UpdatesView from "./components/update/UpdatesView";
 import CastIcon from "@mui/icons-material/Cast";
+import { Link } from "react-router-dom";
 
 const App = () => {
   const [updatesOpen, setUpdatesOpen] = useState(false);
@@ -24,8 +25,13 @@ const App = () => {
         <CastIcon style={{ color: "#ffffff" }} />
         <p className="mx-2 text-white">Live Stream</p>
       </div>
+      <div className="absolute right-5 top-5">
+        <Link className="italic text-white" to="/odds">
+          Odds
+        </Link>
+      </div>
       <Logo />
-      <CountdownTimer targetDate={new Date("2024-07-13T13:30:00")} />
+      <CountdownTimer targetDate={new Date("2025-07-12T13:30:00")} />
       <Buttons />
       <UpdatesView open={updatesOpen} close={() => setUpdatesOpen(false)} />
     </div>
