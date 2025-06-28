@@ -24,45 +24,39 @@ const Games = (props: Props) => {
       },
       {
         name: "Salamonsen",
-        odds: 0.5,
-      },
-      {
-        name: "Pæt",
-        odds: 25.0,
-      },
-      {
-        name: "Don Omar",
         odds: 2.5,
       },
       {
+        name: "Pæt",
+        odds: 3.0,
+      },
+      {
+        name: "Don Omar",
+        odds: 200,
+      },
+      {
         name: "Busk-Bindestrek",
-        odds: 7.69,
+        odds: 10.69,
       },
       {
         name: "Johannes",
-        odds: 8.8,
+        odds: 10.69,
       },
       {
         name: "Skansen",
-        odds: 300,
+        odds: 11,
       },
       {
         name: "Jans1",
-        odds: 0.01,
+        odds: 1000,
       },
-      {
-        name: "Jans2",
-        odds: 0.02,
-      },
-
       {
         name: "Petter",
-        odds: 32.0,
+        odds: 31.0,
       },
-
       {
         name: "Jokke",
-        odds: 21.0,
+        odds: 5.0,
       },
 
       {
@@ -72,42 +66,50 @@ const Games = (props: Props) => {
 
       {
         name: "Mikke",
-        odds: 19.0,
+        odds: 1001.0,
       },
 
       {
         name: "Losoa",
-        odds: 15.0,
+        odds: 7.0,
       },
 
       {
         name: "Wigelius Roska",
-        odds: 10.0,
+        odds: 7,
       },
 
       {
         name: "Lars",
-        odds: 2.5,
+        odds: 35,
       },
 
       {
         name: "Persen",
-        odds: 10.5,
+        odds: 36,
       },
 
       {
         name: "Jovnna",
-        odds: 3.5,
+        odds: 10,
       },
 
       {
         name: "Thomas",
-        odds: 12.3,
+        odds: 1200.3,
       },
 
       {
         name: "Mads",
-        odds: 5.55,
+        odds: 12.0,
+      },
+      {
+        name: "Mathiser",
+        odds: 1300.0,
+      },
+      {
+        name: "Hjellen",
+        odds: 21.0,
       },
     ];
     // sort bu odds
