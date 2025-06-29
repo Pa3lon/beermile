@@ -56,7 +56,7 @@ const Games = (props: Props) => {
       },
       {
         name: "Jokke",
-        odds: 5.0,
+        odds: 5.4,
       },
 
       {
@@ -104,7 +104,7 @@ const Games = (props: Props) => {
         odds: 12.0,
       },
       {
-        name: "Mathiser",
+        name: "Mathisen",
         odds: 1300.0,
       },
       {
