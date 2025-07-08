@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { getOdds } from "../../utils";
+import { useEffect, useState } from "react";
 import BetItem from "./BetItem";
-import Updates from "./Updates";
 
 interface Props {
   games: any[];
@@ -20,27 +18,27 @@ const Games = (props: Props) => {
     const tempOdds = [
       {
         name: "Sigurd",
-        odds: 1.69,
+        odds: 1.49,
       },
       {
         name: "Salamonsen",
-        odds: 2.5,
+        odds: 2.1,
       },
       {
         name: "Pæt",
-        odds: 3.0,
+        odds: 6.4,
       },
       {
         name: "Don Omar",
-        odds: 200,
+        odds: 100,
       },
       {
         name: "Busk-Bindestrek",
-        odds: 10.69,
+        odds: 5.69,
       },
       {
         name: "Johannes",
-        odds: 10.69,
+        odds: 6.69,
       },
       {
         name: "Skansen",
@@ -48,15 +46,15 @@ const Games = (props: Props) => {
       },
       {
         name: "Jans1",
-        odds: 1000,
+        odds: 500,
       },
       {
         name: "Petter",
-        odds: 31.0,
+        odds: 1000.0,
       },
       {
         name: "Jokke",
-        odds: 5.4,
+        odds: 7.9,
       },
 
       {
@@ -81,7 +79,7 @@ const Games = (props: Props) => {
 
       {
         name: "Lars",
-        odds: 35,
+        odds: 12,
       },
 
       {
@@ -91,7 +89,7 @@ const Games = (props: Props) => {
 
       {
         name: "Jovnna",
-        odds: 10,
+        odds: 8.0,
       },
 
       {
@@ -101,7 +99,7 @@ const Games = (props: Props) => {
 
       {
         name: "Mads",
-        odds: 12.0,
+        odds: 8.2,
       },
       {
         name: "Mathisen",
