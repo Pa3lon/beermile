@@ -31,7 +31,7 @@ const App = () => {
         </Link>
       </div>
       <Logo />
-      <CountdownTimer targetDate={new Date("2025-07-12T13:30:00")} />
+      <CountdownTimer targetDate={new Date("2025-07-12T13:50:00")} />
       <Buttons />
       <UpdatesView open={updatesOpen} close={() => setUpdatesOpen(false)} />
     </div>
