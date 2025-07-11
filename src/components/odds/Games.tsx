@@ -5,16 +5,10 @@ interface Props {
   games: any[];
 }
 
-const Games = (props: Props) => {
+const Games = () => {
   const [items, setItems] = useState<any[]>([]);
 
   useEffect(() => {
-    /*
-    getOdds().then((res: any) => {
-      res.data.sort((a: any, b: any) => (a.odds > b.odds ? 1 : -1));
-      setItems(res.data);
-    });
-    */
     const tempOdds = [
       {
         name: "Sigurd",
@@ -31,6 +25,10 @@ const Games = (props: Props) => {
       {
         name: "Don Omar",
         odds: 100,
+      },
+      {
+        name: "Jørgensen",
+        odds: 3.5,
       },
       {
         name: "Busk-Bindestrek",
