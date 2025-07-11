@@ -86,8 +86,8 @@ const Games = (props: Props) => {
       },
 
       {
-        name: "Jovnna",
-        odds: 8.0,
+        name: "Nils1",
+        odds: 8.01,
       },
 
       {
