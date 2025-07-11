@@ -5,7 +5,7 @@ interface Props {
   games: any[];
 }
 
-const Games = () => {
+const Games = (props: Props) => {
   const [items, setItems] = useState<any[]>([]);
 
   useEffect(() => {
